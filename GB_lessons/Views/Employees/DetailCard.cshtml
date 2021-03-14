@@ -1,0 +1,22 @@
+﻿
+@*@model IEnumerable<GB_lessons.Models.Employee>*@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@(Model.LastName + " " + Model.FirstName)</title>
+</head>
+<body>
+
+    <p>ФИО: @(Model.LastName + " " + Model.FirstName)</p>
+    <p>Дата рождения: @Model.DateOfBirth.Date.ToShortDateString()</p>
+    <p>Должность: @Model.Position</p>
+    <p>Заработная плата: @Model.Salary</p>
+    <br />
+    <a href="~/Employees/List">К списку</a>
+
+</body>
+</html>
