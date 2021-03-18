@@ -16,11 +16,7 @@ namespace GB_lessons.Controllers
                 new Employee { Id = 3, FirstName = "Иван", LastName = "Петров", DateOfBirth = new DateTime(1999, 3, 3), Position = "Интерн", Salary = 5000 }
             };
 
-        public IActionResult List()
-        {
-
-            return View(model: __Employees);
-        }
+        public IActionResult Index() => View(__Employees);
 
         public IActionResult DetailCard(int id)
         {
