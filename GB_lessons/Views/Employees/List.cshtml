@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<GB_lessons.Models.Employee>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Сотрудники</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Фамилия Имя</th>
+                <th>Возраст</th>
+            </tr>
+        </thead>
+    </table>
+    <table>
+        <tbody>
+            @{
+                foreach (var employee in Model)
+                {
+                    DateTime zeroTime = new DateTime(1, 1, 1);
+                    DateTime thisDay = DateTime.Today;
+                    TimeSpan DateDiff = thisDay - employee.DateOfBirth;
+                    int years = (zeroTime + DateDiff).Year - 1;
+                <tr>
+                    <td>@employee.Id</td>
+                    <td><a href="~/Employees/DetailCard/@employee.Id">@(employee.LastName + " " + employee.FirstName)</a></td>
+                    <td>@years</td>
+                </tr>
+                    }
+                }
+        </tbody>
+    </table>
+
+    <br />
+
+    <a href="~/Home">На главную</a>
+
+</body>
+</html>
