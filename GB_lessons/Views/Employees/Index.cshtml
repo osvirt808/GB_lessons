@@ -5,8 +5,6 @@
     ViewData["Title"] = "Index";
 }
 
-<!DOCTYPE html>
-
 <div class="container">
     <table class="table">
         <thead>
@@ -26,7 +24,7 @@
                     int years = (zeroTime + DateDiff).Year - 1;
                     <tr>
                         <td>@employee.Id</td>
-                        <td><a href="~/Employees/DetailCard/@employee.Id">@(employee.LastName + " " + employee.FirstName)</a></td>
+                        <td><a asp-action="DetailCard" asp-route-id="@employee.Id">@(employee.LastName + " " + employee.FirstName)</a></td>
                         <td>@years</td>
                     </tr>
                 }

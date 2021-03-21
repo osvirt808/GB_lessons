@@ -1,0 +1,27 @@
+﻿
+
+@{
+    ViewData["Title"] = "Блог магазина";
+}
+
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <partial name="partial/_LeftSideBarBlog"/>
+                </div>
+                <div class="col-sm-9">
+                    <partial name="partial/_BlogPostAreaSingle" />
+                    <partial name="partial/_RatingArea" />
+                    <partial name="partial/_SocialsShare" />
+                    <partial name="partial/_MediaComments" />
+                    <partial name="partial/_ResponseArea" />
+                    <partial name="partial/_ReplayBox" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
