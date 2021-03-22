@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GB_lessons.Controllers
 {
-    public class BlogSingleController : Controller
+    public class ProductDetailsController : Controller
     {
         public IActionResult Index() => View();
     }
