@@ -1,12 +1,19 @@
-﻿<!DOCTYPE html>
+﻿<partial name="partial/_Slider"/>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>Главная</p>
-    <a href="/Employees/List">Сотрудники</a>
-</body>
-</html>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <partial name="partial/_LeftSideBar"/>
+            </div>
+
+            <div class="col-sm-9 padding-right">
+                <partial name="partial/_Products" />
+
+                <partial name="partial/_CategoryTab" />
+
+                <partial name="partial/_RecommendedItems" />
+            </div>
+        </div>
+    </div>
+</section>
