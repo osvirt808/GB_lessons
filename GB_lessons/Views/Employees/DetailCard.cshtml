@@ -12,5 +12,8 @@
     <p>Должность: @Model.Position</p>
     <p>Заработная плата: @Model.Salary</p>
     <br />
-    <a asp-action="Index">К списку</a>
+    <div>
+        <a asp-action="Edit" asp-route-Id="@Model.Id" class="btn btn-default">Редактировать</a> | 
+        <a asp-action="Index" class="btn btn-info">К списку</a>
+    </div>
 </div>

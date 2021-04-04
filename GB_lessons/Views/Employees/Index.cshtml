@@ -12,6 +12,7 @@
                 <th>№</th>
                 <th>Фамилия Имя</th>
                 <th>Возраст</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -22,11 +23,12 @@
                     DateTime thisDay = DateTime.Today;
                     TimeSpan DateDiff = thisDay - employee.DateOfBirth;
                     int years = (zeroTime + DateDiff).Year - 1;
-                    <tr>
-                        <td>@employee.Id</td>
-                        <td><a asp-action="DetailCard" asp-route-id="@employee.Id">@(employee.LastName + " " + employee.FirstName)</a></td>
-                        <td>@years</td>
-                    </tr>
+                        <tr>
+                            <td>@employee.Id</td>
+                            <td><a asp-action="DetailCard" asp-route-id="@employee.Id">@(employee.LastName + " " + employee.FirstName)</a></td>
+                            <td>@years</td>
+                            <td><a asp-action="Edit" asp-route-id="@employee.Id"><i class="fa fa-edit"></i></a></td>
+                        </tr>
                 }
             }
         </tbody>
