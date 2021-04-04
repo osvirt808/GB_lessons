@@ -11,18 +11,20 @@ using System.Threading.Tasks;
 
 namespace GB_lessons
 {
-    public class Startup
+    public record Startup(IConfiguration Configuration)
     {
-        private IConfiguration Configuration { get; }
+        //private IConfiguration Configuration { get; }
 
-        public Startup(IConfiguration Configuration)
-        {
-            this.Configuration = Configuration;
-        }
+        //public Startup(IConfiguration Configuration)
+        //{
+        //    this.Configuration = Configuration;
+        //}
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services
+                .AddControllersWithViews()
+                .AddRazorRuntimeCompilation();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
