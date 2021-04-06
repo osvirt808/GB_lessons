@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace GB_lessons.Components
 {
-    public class SectionViewComponent: ViewComponent
+    public class SectionsViewComponent: ViewComponent
     {
         private readonly IProductData _ProductData;
 
-        public SectionViewComponent(IProductData ProductData) => _ProductData = ProductData;
+        public SectionsViewComponent(IProductData ProductData) => _ProductData = ProductData;
 
         public IViewComponentResult Invoke()
         {

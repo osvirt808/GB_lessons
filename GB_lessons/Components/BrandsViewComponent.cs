@@ -12,7 +12,7 @@ namespace GB_lessons.Components
 
         public BrandsViewComponent(IProductData productData) =>_ProductData = productData;
 
-        public IViewComponentResult Invoke() => View();
+        public IViewComponentResult Invoke() => View(GetBrands());
 
         public IEnumerable<BrandViewModel> GetBrands() =>
             _ProductData.GetBrands()
@@ -22,5 +22,5 @@ namespace GB_lessons.Components
                     Id = b.Id,
                     Name = b.Name                    
                 });
-    }
+    } 
 }
