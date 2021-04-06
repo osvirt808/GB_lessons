@@ -15,6 +15,8 @@ namespace GB_lessons
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IEmployeesData, InMemoryEmployeesData>();
+            services.AddTransient<IProductData, InMemoryProductData>();
+
 
             //services.AddMvc();
 
