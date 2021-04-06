@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using GB_lessons.Infrastructure.Services;
 using GB_lessons.Infrastructure.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using WebStore.Infrastructure.Conventions;
 
 namespace GB_lessons
 {
@@ -14,8 +16,14 @@ namespace GB_lessons
         {
             services.AddTransient<IEmployeesData, InMemoryEmployeesData>();
 
+            //services.AddMvc();
+
             services
-                .AddControllersWithViews()
+                .AddControllersWithViews(
+                mvc =>
+                {
+                    mvc.Conventions.Add(new ApplicationConvention());
+                })
                 .AddRazorRuntimeCompilation();
         }
 

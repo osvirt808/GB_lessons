@@ -1,9 +1,13 @@
 ﻿
 @model GB_lessons.Models.Employee
 
-@{ 
+@{
     ViewData["Title"] = "Сотрудник";
 }
+
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
 
 <div class="container">
     <h1>Сотрудник</h1>
@@ -13,7 +17,9 @@
     <p>Заработная плата: @Model.Salary</p>
     <br />
     <div>
-        <a asp-action="Edit" asp-route-Id="@Model.Id" class="btn btn-default">Редактировать</a> | 
+        <a asp-action="Edit" asp-route-Id="@Model.Id" class="btn btn-default">Редактировать</a> |
+        <a asp-action="Delete" asp-route-Id="@Model.Id" class="btn btn-danger">Удалить</a> |
         <a asp-action="Index" class="btn btn-info">К списку</a>
     </div>
 </div>
+

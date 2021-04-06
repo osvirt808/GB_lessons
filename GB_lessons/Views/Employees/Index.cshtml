@@ -16,6 +16,7 @@
                 <th>Фамилия Имя</th>
                 <th>Возраст</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +32,7 @@
                         <td><a asp-action="DetailCard" asp-route-id="@employee.Id">@(employee.LastName + " " + employee.FirstName)</a></td>
                         <td>@years</td>
                         <td><a asp-action="Edit" asp-route-id="@employee.Id"><i class="fa fa-edit"></i></a></td>
+                        <td><a asp-action="Delete" asp-route-id="@employee.Id"><i class="fa fa-eraser"></i></a></td>
                     </tr>
                 }
             }

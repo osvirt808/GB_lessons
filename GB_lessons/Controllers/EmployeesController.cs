@@ -51,7 +51,10 @@ namespace GB_lessons.Controllers
         [HttpPost]
         public IActionResult Edit(EmployeeViewModel model) 
         {
-            var employee = new Employee
+            if (!ModelState.IsValid)
+                return View(model);
+
+             var employee = new Employee
             {
                 Id = model.Id,
                 LastName = model.LastName,
@@ -67,6 +70,35 @@ namespace GB_lessons.Controllers
                 _EmployeesData.Update(employee);
 
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int Id)
+        {
+            if (Id <= 0) return BadRequest();
+
+            var employee = _EmployeesData.Get(Id);
+
+            if (employee is null)
+                return NotFound();
+
+            return View(new EmployeeViewModel
+            {
+                Id = employee.Id,
+                LastName = employee.LastName,
+                FirstName = employee.FirstName,
+                DateOfBirth = employee.DateOfBirth,
+                Position = employee.Position,
+                Salary = employee.Salary
+            });
+
+        }
+
+        [HttpPost]
+        public IActionResult DeleteConfirmed(int Id)
+        {
+            _EmployeesData.Delete(Id);
+            return RedirectToAction("Index");
+
         }
 
     }
