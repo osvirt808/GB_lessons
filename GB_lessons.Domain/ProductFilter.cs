@@ -10,6 +10,7 @@ namespace GB_lessons.Domain
     {
         public int? SectionId { get; set; }
 
-        public int? BrandnId { get; set; }
+        public int? BrandId { get; set; }
     }
 }
+ 

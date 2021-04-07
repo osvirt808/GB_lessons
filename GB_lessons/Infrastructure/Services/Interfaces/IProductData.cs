@@ -1,8 +1,6 @@
-﻿using GB_lessons.Domain.Entities;
-using System;
+﻿using GB_lessons.Domain;
+using GB_lessons.Domain.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace GB_lessons.Infrastructure.Services.Interfaces
 {
@@ -11,6 +9,8 @@ namespace GB_lessons.Infrastructure.Services.Interfaces
         IEnumerable<Section> GetSections();
 
         IEnumerable<Brand> GetBrands();
+
+        IEnumerable<Product> GetProducts(ProductFilter Filter = null);
 
     }
 }
