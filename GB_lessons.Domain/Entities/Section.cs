@@ -1,5 +1,6 @@
 ﻿using GB_lessons.Domain.Entities.Base;
 using GB_lessons.Domain.Entities.Interfaces;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GB_lessons.Domain.Entities

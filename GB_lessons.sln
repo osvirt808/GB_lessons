@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB_lessons", "GB_lessons\GB_lessons.csproj", "{3DFD8DDF-5BC7-4142-97BC-D8371B99CD49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB_lessons.Domain", "GB_lessons.Domain\GB_lessons.Domain.csproj", "{463A7E9E-DB1F-4A60-A69C-7EF772DE27C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB_lessons.Domain", "GB_lessons.Domain\GB_lessons.Domain.csproj", "{463A7E9E-DB1F-4A60-A69C-7EF772DE27C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB_lessons.DAL", "GB_lessons.DAL\GB_lessons.DAL.csproj", "{CE748A71-6406-44A2-81CC-D1E364B2A362}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{463A7E9E-DB1F-4A60-A69C-7EF772DE27C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{463A7E9E-DB1F-4A60-A69C-7EF772DE27C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{463A7E9E-DB1F-4A60-A69C-7EF772DE27C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE748A71-6406-44A2-81CC-D1E364B2A362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE748A71-6406-44A2-81CC-D1E364B2A362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE748A71-6406-44A2-81CC-D1E364B2A362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE748A71-6406-44A2-81CC-D1E364B2A362}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
