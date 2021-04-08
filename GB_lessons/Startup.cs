@@ -7,6 +7,8 @@ using GB_lessons.Infrastructure.Services;
 using GB_lessons.Infrastructure.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Infrastructure.Conventions;
+using GB_lessons.DAL.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace GB_lessons
 {
@@ -14,6 +16,9 @@ namespace GB_lessons
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<GBDb>(opt => 
+                opt.UseSqlServer(Configuration.GetConnectionString("Default")));
+
             services.AddTransient<IEmployeesData, InMemoryEmployeesData>();
             services.AddTransient<IProductData, InMemoryProductData>();
 
