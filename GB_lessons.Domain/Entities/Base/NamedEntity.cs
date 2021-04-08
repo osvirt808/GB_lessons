@@ -1,9 +1,11 @@
 ﻿using GB_lessons.Domain.Entities.Interfaces;
+using System.ComponentModel.DataAnnotations;
 
 namespace GB_lessons.Domain.Entities.Base
 {
     public abstract class NamedEntity : Entity, INamedEntity
     {
-        public string Name {get;set;}
+        [Required]
+        public string Name { get; set; }
     }
 }
